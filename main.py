@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, List
 
 from fastapi import FastAPI, UploadFile
 import numpy as np
@@ -8,7 +8,7 @@ from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 
 class SudokuBoard(BaseModel):
-    board: list[list[int]]
+    board: List[List[int]]
     solution_limit: int = 1
 
 app = FastAPI()
